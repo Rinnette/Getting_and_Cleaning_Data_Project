@@ -27,7 +27,7 @@ The following data is included in the UCI HAR Dataset:
 
 All data was read into tables using read.table with header = FALSE.
 
-| Data file             | Variable table        |
+| Data file             | Variable              |
 | -----------           | ---------------       |
 | subject_test.txt      | subject_test          |
 | x_test.txt            | x_test                |
