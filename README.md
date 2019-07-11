@@ -1,8 +1,4 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
+
 ## Getting and Cleaning Data - Week 4 Course Project
 
 The purpose of this project is to collect, work with and clean a data set.
@@ -13,7 +9,9 @@ A code book was also created ('codebook.md') and it provides a description of th
 
 
 ### Get the data
-The data for the project is in the form of a zipped file and can be obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The data used for this project is the UCI Human Activity Recognition dataset.  A description can be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The data is in the form of a zipped file and can be obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The following was done:
 
@@ -22,12 +20,24 @@ The following was done:
 
 The following data is included in the UCI HAR Dataset:
 
-* *test* folder containing test data text files
-* *training* folder containing training data text files
+* *test* folder containing test data text files: subject_test, x_test, y_test
+* *training* folder containing training data text files: subject_train, x_train, y_train
 * *activity_labels* text file - contains the activities that correspond with the numbers 1 to 6
 * *features* text file - contains the list of variable names
 
-All data was read into tables using read.table with Header = FALSE.
+All data was read into tables using read.table with header = FALSE.
+
+| Data file             | Variable table        |
+| ___________           | ___________           |
+| subject_test.txt      | subject_test          |
+| x_test.txt            | x_test                |
+| y_test.txt            | y_test                |
+| subject_train.txt     | subject_train         |
+| x_train.txt           | x_train               |
+| y_train.txt           | y_train               |
+| activity_labels.txt   | activity_labels       |
+| features.txt          | features              |
+
 
 
 ### Create one data set
