@@ -1,7 +1,7 @@
-## Getting and Cleaning Data Project
-### Code book
+# Getting and Cleaning Data Project
+## Code book
 
-#### Activity
+### Activity
 Type of activity performed by subject.
 
  1 WALKING
@@ -18,12 +18,12 @@ Type of activity performed by subject.
  
  
                 
-#### Subject
+### Subject
 Identifier assigned to each subject used in the experiment
 1..30   integer   
 
 
-#### All other variables
+### All other variables
 Each variable gives the average of some measurement for a particluar activity and subject.
 [-1, 1]  numeric
                 
@@ -44,7 +44,7 @@ The following key can be used to interpret what measurement was averaged and sto
 | Y                     | Signal measured in the Y direction     |
 | Z                     | Signal measured in the Z direction     |
 
-##### List of the measurement variables:
+#### List of the measurement variables:
 * TimeBodyAccelerationMeanX_Average
 * TimeBodyAccelerationMeanY_Average
 * TimeBodyAccelerationMeanZ_Average
