@@ -26,24 +26,24 @@ library(dplyr)
         y_data <- rbind(y_train, y_test)
         all_data <- cbind(subject_data, y_data, x_data)
 
-        # Add Activity and Subject column names
+        # Add column names
         features <- add_row(features, V2 = "Activity", .before = 1)
         features <- add_row(features, V2 = "Subject", .before = 1)
         features_vect <- as.vector(features[["V2"]], mode = "character")
         names(all_data) <- features_vect
 
         
-#STEP 2: Extract measurements on the mean and standard deviation
+# STEP 2: Extract measurements on the mean and standard deviation
         
         mean_std_cols <- grep("Subject|Activity|(mean|std)\\(\\)", features_vect)
         mean_std_data <- all_data[mean_std_cols]
 
         
-#STEP 3: Use descriptive activity names to name the activities in the data set
+# STEP 3: Use descriptive activity names to name the activities in the data set
         mean_std_data[, "Activity"] <- activity_labels[mean_std_data[, "Activity"], 2]
 
         
-#STEP 4: Label the data set with descriptive variable names
+# STEP 4: Label the data set with descriptive variable names
         names(mean_std_data) <- gsub("^t", "Time", names(mean_std_data))
         names(mean_std_data) <- gsub("^f", "Frequency", names(mean_std_data))
         names(mean_std_data) <- gsub("Acc", "Acceleration", names(mean_std_data))
@@ -57,7 +57,7 @@ library(dplyr)
         names(mean_std_data) <- gsub("BodyBody", "Body", names(mean_std_data))
 
         
-#STEP 5: Create a tidy data set with the average of each variable for each activity and each subject
+# STEP 5: Create a tidy data set with the average of each variable for each activity and each subject
         
         Groupby_Act_Subj <- group_by(mean_std_data, Activity, Subject)
         tidy_data <- summarize_all(Groupby_Act_Subj, list(Average = mean))
