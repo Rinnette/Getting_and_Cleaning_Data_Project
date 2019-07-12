@@ -12,14 +12,30 @@
                 
 #### Subject
         Identifier assigned to each subject used in the experiment
-                1..30   integer
-                
-#### TimeBodyAccelerationMeanX_Average
-        Time domain signal, Average of the Mean of Body Acceleration measured in the X direction for a particular Activity and Subject
+                1..30   integer   
+
+
+#### All other variables
+        Give the average of some measurement for a particluar activity and subject.
                 [-1, 1] numeric
+                
+        The following key can be used to interpret what measurement was averaged and stored in each variable name based on the combines terms.
+
+| Term                  | Interpretation                |
+| -------------------   | ----------------              |
+| Time                  | Time domain signal            |      
+| Frequency             | Frequency domain signal       |
+| BodyAcceleration      | Body Accelaration signal      |
+| GravityAcceleration   | Gravity Accelaration signal   |
+| Mean                  | Mean                          |
+| StandardDeviation     | Standard Deviation            |
+| Jerk                  | 
+| X                     | Signal measured in the X direction     |
+| Y                     | Signal measured in the Y direction     |
+| Z                     | Signal measured in the Z direction     |
 
 
-
+[3] "TimeBodyAccelerationMeanX_Average"                                 
  [4] "TimeBodyAccelerationMeanY_Average"                                 
  [5] "TimeBodyAccelerationMeanZ_Average"                                 
  [6] "TimeBodyAccelerationStandardDeviationX_Average"                    
