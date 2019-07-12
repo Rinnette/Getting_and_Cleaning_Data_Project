@@ -26,7 +26,7 @@ library(dplyr)
         y_data <- rbind(y_train, y_test)
         all_data <- cbind(subject_data, y_data, x_data)
 
-        # add Activity and Subject column names
+        # Add Activity and Subject column names
         features <- add_row(features, V2 = "Activity", .before = 1)
         features <- add_row(features, V2 = "Subject", .before = 1)
         features_vect <- as.vector(features[["V2"]], mode = "character")
@@ -59,7 +59,6 @@ library(dplyr)
         
 #STEP 5: Create a tidy data set with the average of each variable for each activity and each subject
         
-        #MeanStdData <- tbl_df(mean_std_data)
         Groupby_Act_Subj <- group_by(mean_std_data, Activity, Subject)
         tidy_data <- summarize_all(Groupby_Act_Subj, list(Average = mean))
         
