@@ -3,7 +3,7 @@
 
 The purpose of this project is to collect, work with and clean a data set.
 
-The 'run_analysis.R' script saves the data in R, combines the data to forms one data set, extracts only the mean and standard deviation data, changes the activities and variable names to more decriptive names and finally creates a tidy data set of the averages of each variable for each activity and subject.  This file describes how this was done.  Note that the **dplyr** package was used to manipulate the data.
+The 'run_analysis.R' script saves the data in R, combines the data to form one data set, extracts only the mean and standard deviation data, changes the activities and variable names to more decriptive names and finally creates a tidy data set of the averages of each variable for each activity and subject.  This file describes how this was donein the R script.  Note that the **dplyr** package was used to manipulate the data.
 
 A code book was also created ('codebook.md') and it provides a description of the tidy data and what is stored in each variable.  
 
@@ -36,7 +36,7 @@ All data was read into tables using read.table with header = FALSE.
 | x_train.txt           | x_train               |
 | y_train.txt           | y_train               |
 | activity_labels.txt   | activity_labels       |
-| features.txt          | features              |  
+| features.txt          | features              |   
 
 
 
